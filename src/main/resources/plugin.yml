@@ -1,0 +1,6 @@
+name: Skript-CatchUp
+version: '${version}'
+main: jp.nlaocs.skriptcatchup.Skript_CatchUp
+depend: [Skript]
+authors: [Njol, Mirreski, 'SkriptLang Team', Contributors, nlaocs]
+description: Migrate syntax in the latest version of Skript to 1.12.2
