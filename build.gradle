@@ -5,20 +5,31 @@ plugins {
 group = 'jp.nlaocs'
 version = '1.0-SNAPSHOT'
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
 repositories {
     mavenCentral()
-    maven {
-        name = "spigotmc-repo"
-        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
-    }
     maven {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://repo.skriptlang.org/releases' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
 }
 
 dependencies {
-    compileOnly "org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT"
+    compileOnly(group: 'com.github.SkriptLang', name: 'Skript', version: '2.6.4') {
+        transitive = false
+    }
+    compileOnly("org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT")
+    compileOnly("io.papermc:paperlib:1.0.8")
+    compileOnly("com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT")
+    implementation("org.jetbrains:annotations:26.0.1")
 }
 
 def targetJavaVersion = 8
@@ -33,7 +44,6 @@ java {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
     }
