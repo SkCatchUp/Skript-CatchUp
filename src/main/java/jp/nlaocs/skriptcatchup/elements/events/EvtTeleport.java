@@ -43,7 +43,7 @@ public class EvtTeleport extends SkriptEvent {
                 return event.getTo();
             }
         }, EventValues.TIME_NOW);
-        EventValues.registerEventValue(EntityTeleportEvent.class, Block.class, new Getter<Block, EntityTeleportEvent>() {
+        /*EventValues.registerEventValue(EntityTeleportEvent.class, Block.class, new Getter<Block, EntityTeleportEvent>() {
             @Override
             public @Nullable Block get(EntityTeleportEvent event) {
                 return event.getTo().clone().subtract(0, 0.5, 0).getBlock();
@@ -60,7 +60,7 @@ public class EvtTeleport extends SkriptEvent {
             public @Nullable Chunk get(EntityTeleportEvent event) {
                 return event.getFrom().getChunk();
             }
-        }, EventValues.TIME_PAST);
+        }, EventValues.TIME_PAST);*/
     }
 
     @Nullable
