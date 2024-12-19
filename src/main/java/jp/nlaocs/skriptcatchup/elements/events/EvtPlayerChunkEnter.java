@@ -4,10 +4,6 @@ import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
 import ch.njol.skript.lang.SkriptParser;
-import ch.njol.skript.registrations.EventValues;
-import ch.njol.skript.util.Getter;
-import org.bukkit.Chunk;
-import org.bukkit.Location;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.jetbrains.annotations.Nullable;
@@ -21,24 +17,6 @@ public class EvtPlayerChunkEnter extends SkriptEvent {
                         "on player enters a chunk:",
                         "\tsend \"You entered a chunk: %past event-chunk% -> %event-chunk%!\" to player"
                 ).since("2.7");
-        EventValues.registerEventValue(PlayerMoveEvent.class, Chunk.class, new Getter<Chunk, PlayerMoveEvent>() {
-            @Override
-            public Chunk get(PlayerMoveEvent event) {
-                return event.getTo().getChunk();
-            }
-        }, EventValues.TIME_NOW);
-        EventValues.registerEventValue(PlayerMoveEvent.class, Chunk.class, new Getter<Chunk, PlayerMoveEvent>() {
-            @Override
-            public Chunk get(PlayerMoveEvent event) {
-                return event.getFrom().getChunk();
-            }
-        }, EventValues.TIME_PAST);
-        EventValues.registerEventValue(PlayerMoveEvent.class, Location.class, new Getter<Location, PlayerMoveEvent>() {
-            @Override
-            public Location get(PlayerMoveEvent event) {
-                return event.getFrom();
-            }
-        }, EventValues.TIME_PAST);
     }
 
     @Override
