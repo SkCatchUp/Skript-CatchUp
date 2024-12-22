@@ -21,7 +21,7 @@ import org.bukkit.entity.LivingEntity;
 public class CondCanPickUpItems extends PropertyCondition<LivingEntity> {
 
     static {
-        register(CondCanPickUpItems.class, PropertyType.CAN, "[catch[ ]up] pick([ ]up items| items up)", "livingentities");
+        register(CondCanPickUpItems.class, PropertyType.CAN, "pick([ ]up items| items up) [catch[ ]up]", "livingentities");
     }
 
     @Override

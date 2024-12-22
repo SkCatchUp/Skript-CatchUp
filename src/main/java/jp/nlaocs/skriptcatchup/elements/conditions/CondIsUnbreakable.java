@@ -22,7 +22,7 @@ import ch.njol.util.Kleenean;
 public class CondIsUnbreakable extends PropertyCondition<ItemType> {
 
     static {
-        register(CondIsUnbreakable.class, "[catch[ ]up] [:un]breakable", "itemtypes");
+        register(CondIsUnbreakable.class, "[:un]breakable [catch[ ]up]", "itemtypes");
     }
 
     private boolean breakable;

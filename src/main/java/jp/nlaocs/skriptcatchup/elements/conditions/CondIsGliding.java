@@ -15,7 +15,7 @@ import ch.njol.skript.conditions.base.PropertyCondition;
 public class CondIsGliding extends PropertyCondition<LivingEntity> {
 
     static {
-        register(CondIsGliding.class, "[catch[ ]up] gliding", "livingentities");
+        register(CondIsGliding.class, "gliding [catch[ ]up]", "livingentities");
     }
 
     @Override
