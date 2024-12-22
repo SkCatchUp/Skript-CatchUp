@@ -30,7 +30,7 @@ public class CondIsLeftHanded extends PropertyCondition<LivingEntity> {
 
 
     static {
-        register(CondIsLeftHanded.class, PropertyType.BE, "[catch[ ]up] (:left|right)( |-)handed", "livingentities");
+        register(CondIsLeftHanded.class, PropertyType.BE, "(:left|right)( |-)handed [catch[ ]up]", "livingentities");
     }
 
     private MainHand hand;

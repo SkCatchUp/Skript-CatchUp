@@ -25,8 +25,8 @@ public class CondPlayedBefore extends Condition {
 
     static {
         Skript.registerCondition(CondPlayedBefore.class,
-                "[catch[ ]up] %offlineplayers% [(has|have|did)] [already] play[ed] [on (this|the) server] (before|already)",
-                "[catch[ ]up] %offlineplayers% (has not|hasn't|have not|haven't|did not|didn't) [(already|yet)] play[ed] [on (this|the) server] (before|already|yet)");
+                "%offlineplayers% [(has|have|did)] [already] play[ed] [on (this|the) server] (before|already) [catch[ ]up]",
+                "%offlineplayers% (has not|hasn't|have not|haven't|did not|didn't) [(already|yet)] play[ed] [on (this|the) server] (before|already|yet) [catch[ ]up]");
     }
 
     @SuppressWarnings("null")

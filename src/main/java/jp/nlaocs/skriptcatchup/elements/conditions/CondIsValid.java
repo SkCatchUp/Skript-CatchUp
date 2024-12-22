@@ -15,7 +15,7 @@ import ch.njol.skript.doc.Since;
 public class CondIsValid extends PropertyCondition<Entity> {
 
     static {
-        register(CondIsValid.class, "[catch[ ]up] valid", "entities");
+        register(CondIsValid.class, "valid [catch[ ]up]", "entities");
     }
 
     @Override
