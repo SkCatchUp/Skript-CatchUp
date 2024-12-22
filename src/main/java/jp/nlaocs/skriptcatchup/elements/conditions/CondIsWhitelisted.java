@@ -47,7 +47,7 @@ public class CondIsWhitelisted extends Condition {
         isServer = matchedPattern != 1;
         isEnforce = matchedPattern == 2;
         if (isEnforce) {
-            Skript.error("Enforce whitelist is not supported in this version");
+            Skript.error("Enforce whitelist is not supported in this version.");
             return false;
         }
         if (matchedPattern == 1)
