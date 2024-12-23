@@ -23,7 +23,7 @@ public class CondWillHatch extends Condition {
 
     static {
         Skript.registerCondition(CondWillHatch.class,
-                "[the] egg (:will|will not|won't) hatch [catch[ ]up]"
+                "[the] egg (:will|will not|won't) [catch[ ]up] hatch"
         );
     }
 
