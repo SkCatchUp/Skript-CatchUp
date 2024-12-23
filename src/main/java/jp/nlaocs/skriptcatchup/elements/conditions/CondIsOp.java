@@ -14,7 +14,7 @@ import org.bukkit.OfflinePlayer;
 public class CondIsOp extends PropertyCondition<OfflinePlayer> {
 
     static {
-        register(CondIsOp.class, PropertyType.BE, "[[a] server|an] op[erator][s] [catch[ ]up]", "offlineplayers");
+        register(CondIsOp.class, PropertyType.BE, "[catch[ ]up] [[a] server|an] op[erator][s]", "offlineplayers");
     }
 
     @Override

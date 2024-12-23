@@ -18,7 +18,7 @@ import ch.njol.skript.doc.Since;
 public class CondIsStackable extends PropertyCondition<ItemStack> {
 
     static {
-        register(CondIsStackable.class, "stackable [catch[ ]up]", "itemstacks");
+        register(CondIsStackable.class, "[catch[ ]up] stackable", "itemstacks");
     }
 
     @Override

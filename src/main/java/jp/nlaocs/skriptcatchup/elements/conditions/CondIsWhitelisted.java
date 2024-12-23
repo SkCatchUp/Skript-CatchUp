@@ -28,9 +28,9 @@ public class CondIsWhitelisted extends Condition {
 
     static {
         String[] patterns = new String[3];
-        patterns[0] = "[the] server (is|not:(isn't|is not)) (in white[ ]list mode|white[ ]listed) [catch[ ]up]";
-        patterns[1] = "%offlineplayers% (is|are|not:(isn't|is not|aren't|are not)) white[ ]listed [catch[ ]up]";
-        patterns[2] = "[the] server white[ ]list (is|not:(isn't|is not)) enforced [catch[ ]up]";
+        patterns[0] = "[the] server (is|not:(isn't|is not)) [catch[ ]up] (in white[ ]list mode|white[ ]listed)";
+        patterns[1] = "%offlineplayers% (is|are|not:(isn't|is not|aren't|are not)) [catch[ ]up] white[ ]listed";
+        patterns[2] = "[the] server white[ ]list (is|not:(isn't|is not)) [catch[ ]up] enforced";
         Skript.registerCondition(CondIsWhitelisted.class, patterns);
     }
 
